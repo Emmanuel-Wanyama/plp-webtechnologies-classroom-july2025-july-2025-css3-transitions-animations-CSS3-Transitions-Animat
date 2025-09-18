@@ -1,0 +1,100 @@
+/* --- Global Styles --- */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 40px 0;
+}
+
+/* --- Part 1: CSS Transitions and Animations --- */
+
+/* 1. Button Hover Transition */
+.styled-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    /* transition properties: property, duration, timing-function */
+    transition: background-color 0.3s ease-in-out, transform 0.1s linear;
+}
+
+.styled-btn:hover {
+    background-color: #0056b3; /* Color change */
+    transform: scale(1.05); /* Slight growth */
+}
+
+/* 2. Continuous @keyframes Animation */
+@keyframes pulseColor {
+    0%   { background-color: #ffccaa; }
+    50%  { background-color: #ffaa88; }
+    100% { background-color: #ffccaa; }
+}
+
+#loadingBox {
+    width: 200px;
+    padding: 15px;
+    margin-top: 20px;
+    text-align: center;
+    border: 1px solid #ffaa88;
+    border-radius: 5px;
+    /* Apply keyframe animation */
+    animation: pulseColor 2s infinite alternate;
+}
+
+
+/* --- Part 3: Combining CSS Animations with JavaScript --- */
+
+/* Keyframe for Slide-In/Fade-In Effect */
+@keyframes slideInFade {
+    0%   { opacity: 0; transform: translateY(-50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.notification-modal {
+    position: fixed;
+    top: 50px;
+    right: 20px;
+    padding: 15px 25px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    opacity: 0; /* Default hidden state opacity */
+    transform: translateY(-50px); /* Default hidden state position */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Smooth transitions for non-triggered states */
+}
+
+/* Class added by JavaScript to trigger the animation */
+.show-state {
+    /* Override transition properties to use animation */
+    transition: none;
+    animation: slideInFade 0.6s forwards; /* Use keyframe animation */
+}
+
+/* Class added by JavaScript to hide the element smoothly */
+.hidden-state {
+    opacity: 0;
+    transform: translateY(-50px);
+}
+
+.card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: white;
+}

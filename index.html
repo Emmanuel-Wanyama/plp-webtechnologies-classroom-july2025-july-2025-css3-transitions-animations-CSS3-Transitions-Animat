@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Web Interactivity</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>CSS & JavaScript Interaction Demo</h1>
+    </header>
+
+    <main>
+        <section id="part-1">
+            <h2>🎨✨ Part 1: CSS Dynamic Styling</h2>
+            <p>Hover over the button and the box to see CSS transitions and continuous animation.</p>
+            <button class="styled-btn" id="transitionButton">Hover for Transition</button>
+            <div id="loadingBox" class="animated-box">CSS @keyframes Animation</div>
+        </section>
+
+        <hr>
+
+        <section id="part-2">
+            <h2>📚✨ Part 2: JavaScript Functions Logic</h2>
+            <div class="card">
+                <label for="priceInput">Enter Price:</label>
+                <input type="number" id="priceInput" value="100">
+                <button id="calcButton">Calculate Tax</button>
+                <p>Taxed Price (15%): <span id="taxedPriceOutput"></span></p>
+                <p>Check the console for the scope demonstration.</p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="part-3">
+            <h2>🎨🎬 Part 3: JS-Triggered CSS Animation</h2>
+            <p>Click the button below to trigger a dynamic slide-in/fade-out animation via JavaScript class manipulation.</p>
+            <button id="triggerAnimationBtn">Show/Hide Notification</button>
+            <div id="notification" class="notification-modal hidden-state">
+                Notification: Animation Triggered by JS!
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
